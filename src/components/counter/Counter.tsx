@@ -1,17 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
 
-export default class Counter extends React.Component {
-    static propTypes = {
-        initialCount: PropTypes.number,
-    };
+interface CounterProps {
+    initialCount?: number;
+};
 
-    static defaultProps = {
-        initialCount: 0,
-    };
+interface CounterState {
+    count: number;
+}
 
+export default class Counter extends React.Component<CounterProps, CounterState> {
+    
     state = {
-        count: this.props.initialCount,
+        count: this.props.initialCount || 0,
     };
 
     increment = () => {

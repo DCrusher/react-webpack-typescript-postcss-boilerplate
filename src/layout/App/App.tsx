@@ -1,9 +1,8 @@
-/* @flow */
-import React from 'react';
+import * as React from 'react';
 
 import Counter from 'components/counter/Counter';
 
-import styles from './App.sss';
+import styles from './App.sss'; 
 
 const App = () => (
     <div className={styles.base} >

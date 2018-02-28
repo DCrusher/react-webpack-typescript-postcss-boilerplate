@@ -6,7 +6,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const DIST_FOLDER = 'dist';
 
 module.exports = {
-    entry: './src/index.jsx',
+    entry: './src/index.tsx',
     output: {
         path: path.resolve(__dirname, DIST_FOLDER),
         filename: 'index.js',
@@ -18,8 +18,8 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/i,
-                loader: 'babel-loader',
+                test: /\.(ts|tsx)$/,
+                loader: 'ts-loader',
                 exclude: /node_modules/,
             },
             {
@@ -52,10 +52,9 @@ module.exports = {
         ],
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.json'],
+        extensions: ['.ts', '.tsx', '.json'],
         modules: [
             path.resolve(__dirname, 'src'),
-            path.resolve('src'),
             'node_modules',
         ],
     },
