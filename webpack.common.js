@@ -51,6 +51,14 @@ module.exports = {
             },
         ],
     },
+    resolve: {
+        extensions: ['.js', '.jsx', '.json'],
+        modules: [
+            path.resolve(__dirname, 'src'),
+            path.resolve('src'),
+            'node_modules',
+        ],
+    },
     plugins: [
         new CleanWebpackPlugin([DIST_FOLDER]),
         new HtmlWebpackPlugin({
@@ -59,8 +67,4 @@ module.exports = {
         }),
         new ExtractTextPlugin({ filename: 'styles.css', allChunks: true }),
     ],
-    resolve: {
-        extensions: ['.js', '.jsx', '.json'],
-        modules: [path.resolve(__dirname, 'src'), 'node_modules'],
-    },
 };
