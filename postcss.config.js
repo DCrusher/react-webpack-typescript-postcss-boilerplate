@@ -1,7 +1,9 @@
 module.exports = {
     parser: 'sugarss',
     plugins: {
-        'postcss-import': {},
+        'postcss-import': {
+            path: ['src', 'node_modules']
+        },
         stylelint: {},
         'postcss-autoreset': {},
         'postcss-cssnext': {},

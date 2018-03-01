@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot matching 1`] = `
+<div
+  className="base"
+>
+  <a
+    href="#"
+  >
+    App
+  </a>
+  <Counter />
+</div>
+`;

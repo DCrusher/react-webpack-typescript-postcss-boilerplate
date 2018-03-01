@@ -52,7 +52,7 @@ module.exports = {
         ],
     },
     resolve: {
-        extensions: ['.ts', '.tsx', '.json'],
+        extensions: ['.ts', '.tsx', '.js', '.json'],
         modules: [
             path.resolve(__dirname, 'src'),
             'node_modules',
